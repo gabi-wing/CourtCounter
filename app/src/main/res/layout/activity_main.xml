@@ -4,8 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?android:attr/listDivider"
+        android:layout_centerInParent="true"/>
+
     <LinearLayout
         android:id="@+id/teamALayout"
+        android:padding="16sp"
+        android:layout_alignRight="@id/divider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -55,9 +64,10 @@
 
     <LinearLayout
         android:id="@+id/teamBLayout"
+        android:padding="16sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/teamALayout"
+        android:layout_alignLeft="@id/divider"
         android:orientation="vertical">
 
         <TextView
@@ -110,5 +120,9 @@
         android:text="RESET"
         android:onClick="reset"
         android:layout_centerInParent="true"/>
+
+
+
+
 </RelativeLayout>
 
